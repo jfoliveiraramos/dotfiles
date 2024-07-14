@@ -47,4 +47,20 @@ return require('packer').startup(function(use)
 		"nvim-tree/nvim-tree.lua"
 	}
 
+	use {
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup {}
+		end
+	}
+	use({
+		"Pocco81/auto-save.nvim",
+		config = function()
+			require("auto-save").setup {
+				-- your config goes here
+				-- or just leave it empty :)
+			}
+		end,
+	})
 end)

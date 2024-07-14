@@ -16,6 +16,6 @@ require('mason-lspconfig').setup({
       require('lspconfig')[server_name].setup({})
 -- here you can setup the language servers
     end,
-    
+
   },
 })
