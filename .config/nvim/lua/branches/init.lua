@@ -1,6 +1,7 @@
 vim.cmd("set ignorecase")
 
-vim.wo.relativenumber = true
+vim.opt.relativenumber = true
+vim.opt.number = true
 
 vim.opt.shiftwidth = 4
 

@@ -7,12 +7,10 @@ cmp.setup({
 	mapping = {
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<Tab>'] = cmp.mapping.confirm({select = true}),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),
-		['<Space>'] = cmp.mapping.confirm({ select = true }),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
 		['<Down>'] = cmp.mapping.select_next_item({behavior = 'select'}),
-		['<C-p>, <S-Tab>'] = cmp.mapping(function()
+		['<C-p>'] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_prev_item({behavior = 'insert'})
 			else
