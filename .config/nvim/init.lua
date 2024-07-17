@@ -1,2 +1,2 @@
-require("branches")
-require("branches.remap")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
