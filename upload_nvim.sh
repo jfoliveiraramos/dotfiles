@@ -9,6 +9,6 @@ fi
 rm -rf ./.config/nvim
 cp -r ~/.config/nvim ./.config/
 
-git add ./config/nvim
+git add ./.config/nvim
 git commit -m "$commit"
 git push
