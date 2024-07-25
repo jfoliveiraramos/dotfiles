@@ -1,11 +1,17 @@
 #!/bin/bash
 
+cleanup() {
+    cd ..
+    rm -rf ./dotfiles
+}
+
 check_exit() {
     error_message=$1
 
     if [ $? -ne 0 ]; then
         echo $error_message
         echo "Exiting..."
+        cleanup
         exit 1
     fi
 }
@@ -79,8 +85,9 @@ if [ -z $HOME ]; then
 fi
 
 echo "Retrieving most recent configuration..."
-git pull 2>&1 >/dev/null
+git clone --recursive https://github.com/jfoliveiraramos/dotfiles
 check_exit "Something went wrong while fetching from remote repository."
+cd ./dotfiles
 echo
 
 quit=0
@@ -110,3 +117,7 @@ while [ $quit -ne 1 ]; do
     esac
 
 done
+
+cleanup
+
+clear
