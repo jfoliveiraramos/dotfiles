@@ -7,5 +7,5 @@ This repository contains my personal configurations for Arch, Hyprland and NeoVi
 This repository provides a bash script to streamline the local configuration management process.
 To run it, do:
 ```bash
-curl -o setup https://github.com/jfoliveiraramos/dotfiles/setup.sh && ./setup && rm ./setup
+curl -o setup https://github.com/jfoliveiraramos/dotfiles/master/setup.sh && ./setup && rm ./setup
 ```
