@@ -64,7 +64,7 @@ setup_neovim() {
         fi
     fi
 
-    cp -r ./.config/nvim $HOME/.config/
+    rsync -a --exclude='.git' --exclude='README.md' --exclude='LICENSE' ./.config/nvim/ $HOME/.config/nvim/ 2>&1 >/dev/null
     check_exit "Something went wrong while copying NeoVim config"
     echo "NeoVim configuration successfuly set up"
     press_key
