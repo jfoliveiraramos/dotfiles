@@ -13,7 +13,9 @@ chmod +x setup;
 rm ./setup
 ```
 
-## Keybindings
+## NeoVim
+
+### Key Bindings
 
 | Key | Mode | Action |
 | --- | ---- | ------ |
