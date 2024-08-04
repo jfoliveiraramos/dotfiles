@@ -8,7 +8,6 @@ This repository provides a bash script to streamline the local configuration man
 To run it, do:
 ```bash
 curl -o setup https://raw.githubusercontent.com/jfoliveiraramos/dotfiles/master/setup.sh; 
-chmod +x setup;
 ./setup;
 rm ./setup
 ```
