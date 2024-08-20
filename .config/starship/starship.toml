@@ -1,0 +1,24 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+palette = 'ramos'
+
+[palettes.ramos]
+gold = '#DAA520'
+
+[character]
+
+success_symbol = '[❯](bold gold)'
+
+[directory]
+style = 'bold black'
+
+[git_branch]
+style = 'bold gold'
+
+[conda] 
+style = 'bold gold'
+ignore_base = true

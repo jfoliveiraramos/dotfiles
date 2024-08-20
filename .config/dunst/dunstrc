@@ -1,0 +1,26 @@
+[global]
+    format = "<b>%s</b>\n%b"
+
+    font="JetBrainsMonoNF 11"
+    foreground="#FFFFFF"
+    background="#000000"
+
+    max_icon_size = 60
+    min_icon_size = 60
+    text_icon_padding = 10 
+    icon_corner_radius = 4
+
+    indicate_hidden = yes
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    width = 400
+    height = 300
+    offset = 10x50
+    corner_radius=5
+    padding=11
+    horizontal_padding=11
+    frame_width=0
