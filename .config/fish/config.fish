@@ -8,6 +8,8 @@ set -x STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 starship init fish | source
 zoxide init --cmd cd fish | source
 
+set -x PATH "/bin/zig-linux-x86_64-0.14.0" $PATH
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/ramos/miniconda3/bin/conda
