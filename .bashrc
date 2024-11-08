@@ -13,4 +13,3 @@ eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
 
 export GDK_BACKEND=wayland
-export PATH="/bin/zig-linux-x86_64-0.14.0:$PATH"

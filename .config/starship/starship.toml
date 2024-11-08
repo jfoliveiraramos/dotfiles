@@ -10,7 +10,6 @@ palette = 'ramos'
 gold = '#DAA520'
 
 [character]
-
 success_symbol = '[❯](bold gold)'
 
 [directory]
@@ -22,3 +21,9 @@ style = 'bold gold'
 [conda] 
 style = 'bold gold'
 ignore_base = true
+
+# ~/.config/starship.toml
+
+[zig]
+style = 'bold gold'
+symbol = '⚡️ '
