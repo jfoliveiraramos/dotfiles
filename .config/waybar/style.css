@@ -10,14 +10,15 @@ window#waybar {
     background-color: transparent;
 }
 
-.modules-left, .modules-right {
+.modules-left,
+.modules-right {
     background-color: rgba(256, 256, 256, 0.85);
     color: black;
     border-radius: 4px;
 }
 
 .modules-right {
-    padding-left:5px;
+    padding-left: 5px;
 }
 
 #workspaces button {
@@ -35,14 +36,14 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(17, 17, 21, 0.85);
     color: white;
 }
 
 
 #workspaces button:hover {
     background: rgba(20, 20, 20, 0.85);
-    color: white;    
+    color: white;
 }
 
 
@@ -51,17 +52,17 @@ window#waybar {
 }
 
 #clock {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(17, 17, 21, 0.85);
     color: white;
     border-radius: 4px;
 }
 
 #battery {
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(17, 17, 21, 0.85);
 }
 
 #battery.charging {
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(17, 17, 21, 0.85);
 }
 
 #battery.discharging {
@@ -86,7 +87,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(17, 17, 21, 0.85);
     padding: 0px 10px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;

@@ -7,23 +7,40 @@ add_newline = true
 palette = 'ramos'
 
 [palettes.ramos]
-gold = '#DAA520'
+black = "#111115"
+orange = "#f8b478"
+accent = "#fce9d3"
+white = "#fefefe"
+red = "#eea08f"
+purple = "#9694ff"
+yellow = "#fccc44"
 
 [character]
-success_symbol = '[❯](bold gold)'
+success_symbol = '[❯](bold orange)'
 
 [directory]
-style = 'bold black'
+style = 'bold accent'
 
 [git_branch]
-style = 'bold gold'
+style = 'bold orange'
+
+[git_status]
+style = 'bold accent'
 
 [conda] 
-style = 'bold gold'
+style = 'bold orange'
 ignore_base = true
 
-# ~/.config/starship.toml
+[lua]
+style = 'bold purple'
+
+[package]
+style = 'bold orange'
 
 [zig]
-style = 'bold gold'
 symbol = '⚡️ '
+style = 'bold yellow'
+
+[cmd_duration]
+min_time = 500
+format = 'underwent [$duration](bold white)'
