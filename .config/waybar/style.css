@@ -1,9 +1,9 @@
 * {
-    border: none;
-    border-radius: 0;
     font-family: JetBrainsMono NFM Extra Bold, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0;
+    /* Black background */
+    /* White text */
 }
 
 window#waybar {
@@ -12,83 +12,104 @@ window#waybar {
 
 .modules-left,
 .modules-right {
-    background-color: rgba(256, 256, 256, 0.85);
-    color: black;
-    border-radius: 4px;
+    background-color: #111115;
+    /* Black background */
+    color: #fce9d3;
+    /* White text */
+    border: 2px solid #fce9d3;
+    /* Orange border */
+    border-radius: 8px;
+    /* Rounded borders */
 }
 
-.modules-right {
-    padding-left: 5px;
+.modules-right * {
+    padding: 4px 0px;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 6px;
+    background-color: #111115;
+    /* Black background */
+    color: #fce9d3;
+    border-radius: 0;
+    /* White text */
 }
 
 #workspaces button:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 #workspaces button:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 #workspaces button.active {
-    background: rgba(17, 17, 21, 0.85);
-    color: white;
+    background: #fce9d3;
+    /* Black with slight transparency */
+    color: #111115;
+    border: none;
+    /* White text */
 }
-
 
 #workspaces button:hover {
-    background: rgba(20, 20, 20, 0.85);
-    color: white;
-}
-
-
-#clock {
-    padding: 0 10px;
+    background: #fce9d3;
+    /* Black with slight transparency */
+    color: #111115;
+    border: none;
+    /* White text */
 }
 
 #clock {
-    background-color: rgba(17, 17, 21, 0.85);
-    color: white;
-    border-radius: 4px;
+    padding: 1 10px;
+    background-color: #111115;
+    /* Black background */
+    color: #fce9d3;
+    /* White text */
+    border: 2px solid #fce9d3;
+    /* Orange border */
+    border-radius: 8px;
+    /* Rounded borders */
 }
 
 #battery {
-    color: rgba(17, 17, 21, 0.85);
+    color: #fce9d3;
+    /* White text */
 }
 
 #battery.charging {
-    color: rgba(17, 17, 21, 0.85);
+    color: #fce9d3;
+    /* White text */
 }
 
 #battery.discharging {
     color: #ffbf48;
+    /* Yellow color for discharging */
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        /* Orange background */
+        color: #111115;
+        /* Black text */
     }
 }
 
 #battery.warning:not(.charging) {
-    background: #ffffff;
+    /* Orange background */
     color: #f53c3c;
+    /* Red color for warning */
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 #tray {
-    background-color: rgba(17, 17, 21, 0.85);
-    padding: 0px 10px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border: 2px solid #fce9d3;
+    padding-right: 6px;
+    padding-left: 6px;
+    background-color: #fce9d3;
 }

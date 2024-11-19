@@ -1,11 +1,11 @@
-@define-color black #020202;
-@define-color gold #daa520;
-@define-color grey #4d4e48;
-@define-color base white;
-@define-color text @black;
+@define-color black #111115;
+@define-color orange #f8b478;
+@define-color accent #fce9d3;
+@define-color base black;
+@define-color text @accent;
 
 * {
-  font-family: 'Inconsolata Nerd Font', monospace;
+  font-family: JetBrainsMono NFM Extra Bold, Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -23,13 +23,13 @@ window {
 /* Slide In */
 @keyframes slideIn {
   0% {
-     opacity: 0
-  ;
+    opacity: 0;
   }
 
   border: none;
+
   100% {
-     opacity: 0.85;
+    opacity: 0.85;
   }
 }
 
@@ -46,11 +46,11 @@ window {
 /* Fade In */
 @keyframes fadeIn {
   0% {
-     opacity: 0;
+    opacity: 0;
   }
 
   100% {
-     opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -84,16 +84,16 @@ window {
 }
 
 #input:focus {
-  box-shadow : 0 0 0 1px @black;
+  box-shadow: 0 0 0 1px @accent;
 }
 
 #input image {
-    border: none;
-    color: @black;
+  border: none;
+  color: @accent;
 }
 
 #input * {
-  outline: 4px solid @black!important;
+  outline: 4px solid @accent !important;
 }
 
 /* Text */
@@ -110,7 +110,7 @@ window {
 
 #entry arrow {
   border: none;
-  color: @black;
+  color: @accent;
 }
 
 /* Selected Entry */
@@ -120,9 +120,9 @@ window {
 
 #entry:selected #text {
   font-weight: bold;
-  color: @gold;
+  color: @orange;
 }
 
 #entry:drop(active) {
-  background-color: @grey!important;
+  background-color: @accent !important;
 }
