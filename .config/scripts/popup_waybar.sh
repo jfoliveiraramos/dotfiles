@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Launch Waybar temporarily
+killall waybar
 echo "Starting Waybar..."
 waybar &      # Launch Waybar in the background
 WAYBAR_PID=$! # Capture the process ID of Waybar

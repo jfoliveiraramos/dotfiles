@@ -1,13 +1,14 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "bottom",
+    "position": "top",
+    "mode": "dock",
     "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "margin-top": 10,
-    "margin-left": 20,
-    "margin-right": 20,
-    "margin-bottom": 0,
+    "margin-top": 5,
+    "margin-left": 3,
+    "margin-right": 3,
+    "margin-bottom": 4,
     "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -21,17 +22,17 @@
         "clock"
     ],
     "modules-right": [
-        "mpd",
-        "idle_inhibitor",
+        // "mpd",
+        // "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
+        // "power-profiles-daemon",
+        // "cpu",
+        // "memory",
+        // "temperature",
+        // "backlight",
+        // "keyboard-state",
+        // "sway/language",
         "battery",
         "battery#bat2",
         "tray"
@@ -43,7 +44,7 @@
     //     "warp-on-scroll": false,
     //     "format": "{name}: {icon}",
     //     "format-icons": {
-    //      _   "1": "",
+    //         "1": "",
     //         "2": "",
     //         "3": "",
     //         "4": "",

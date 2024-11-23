@@ -16,11 +16,11 @@ inside-caps-lock-color=009ddc00
 inside-ver-color=d9d8d800
 inside-wrong-color=ee2e2400
 
-ring-color=4b77bed9
-ring-clear-color=4b77bed9
-ring-caps-lock-color=4b77bed9
-ring-ver-color=4b77bed9
-ring-wrong-color=4b77bed9
+ring-color=f8b478
+ring-clear-color=f8b478
+ring-caps-lock-color=f8b478
+ring-ver-color=f8b478
+ring-wrong-color=f8b478
 
 line-color=00000000
 line-clear-color=ffd204FF
