@@ -13,3 +13,5 @@ eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
 
 export GDK_BACKEND=wayland
+export LD_LIBRARY_PATH=/home/ramos/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/ramos/.local/lib/arch-mojo:$LD_LIBRARY_PATH

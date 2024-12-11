@@ -7,8 +7,8 @@ This repository contains my personal configurations for Arch, Hyprland and NeoVi
 ### Key Bindings
 
 | Key | Mode | Action |
-| --- | ---- | ------ |
-| `Space` | Normal | _<Leader>_ |
+| --- | ---- | --------- |
+| `Space` | Normal | _\<Leader\>_  |
 | `Space p v` | Normal | Open NeoVim explorer |
 | `Space p f` | Normal | Open Telescope |
 | `Space o` | Normal | Insert line below, remains in Normal Mode |
@@ -21,8 +21,8 @@ This repository contains my personal configurations for Arch, Hyprland and NeoVi
 | `Ctrl + f` | Normal | Search document |
 | `n` | Normal | Iterate forward search results with vertically centered cursor |
 | `N` | Normal | Iterate backwards search results with vertically centered cursor |
-| `Space y` | Normal | Copy/Yank to clipboard |    
-| `J` | Visual | Drags downwards selected text, while in Visual Mode |    
-| `K` | Visual | Drags upwards selected text, while in Visual Mode |    
+| `Space y` | Normal | Copy/Yank to clipboard |
+| `J` | Visual | Drags downwards selected text, while in Visual Mode |
+| `K` | Visual | Drags upwards selected text, while in Visual Mode |
 | `Space s` | Normal | Substitute all words matching the cursor position |
-| `Space x` | Normal | Make the currentfile and executable | 
+| `Space x` | Normal | Make the currentfile and executable |
