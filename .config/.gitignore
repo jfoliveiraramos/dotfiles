@@ -33,3 +33,5 @@
 !Thunar/**
 !waybar 
 !waybar/**
+!ghostty 
+!ghostty/**
