@@ -35,3 +35,5 @@
 !waybar/**
 !ghostty 
 !ghostty/**
+!tmux
+!tmux/**
