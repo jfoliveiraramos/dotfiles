@@ -13,4 +13,6 @@ foreground=#fce9d3
 background=#111115
 background-opacity=0.7
 
+window-padding-x=8
+
 command=fish
