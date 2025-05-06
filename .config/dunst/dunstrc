@@ -1,5 +1,6 @@
 [global]
-    format = "<b>%s</b>\n%b"
+    monitor = 0    
+    follow  = keyboard
 
     font="JetBrainsMonoNF 11"
     foreground="#fce9d3"
