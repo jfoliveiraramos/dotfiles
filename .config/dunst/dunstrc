@@ -2,8 +2,9 @@
     format = "<b>%s</b>\n%b"
 
     font="JetBrainsMonoNF 11"
-    foreground="#FFFFFF"
+    foreground="#fce9d3"
     background="#000000"
+    frame_color="#fce9d3"
 
     max_icon_size = 60
     min_icon_size = 60
@@ -23,4 +24,11 @@
     corner_radius=5
     padding=11
     horizontal_padding=11
-    frame_width=0
+    frame_width=2
+
+[osd]
+    summary = "*"
+    urgency = low
+    match_string = "string:x-dunst-stack-tag:osd"
+    origin = bottom-center
+    alignment = center
