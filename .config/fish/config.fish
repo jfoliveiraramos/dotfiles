@@ -9,3 +9,4 @@ starship init fish | source
 zoxide init --cmd cd fish | source
 
 bind \cq $HOME/.config/scripts/setup_tmux.sh
+bind \ca tmux attach
