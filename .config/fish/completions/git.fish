@@ -24,3 +24,12 @@ complete -c git \
     -f \
     -a '(git for-each-ref --format="%(refname:short)" refs/heads)' \
     -d 'local branches'
+
+# ——————————————————————————————————
+# 3) Completion for `git push --set-upstream origin <branch>`
+# ——————————————————————————————————
+complete -c git \
+    -n '__fish_seen_subcommand_from push; and __fish_seen_argument --set-upstream; and __fish_seen_argument origin' \
+    -f \
+    -a '(git for-each-ref --format="%(refname:short)" refs/heads)' \
+    -d 'local branches (for upstream)'
