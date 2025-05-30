@@ -4,8 +4,8 @@ end
 
 set -g fish_greeting
 
-set -x GOROOT /usr/local/go
-set -x PATH $GOROOT/bin $PATH
+set -x GOPATH $HOME/.go
+set -x PATH $PATH $GOPATH/bin
 
 set -x STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 starship init fish | source
