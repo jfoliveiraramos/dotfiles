@@ -31,7 +31,7 @@ if ! tmux has-session -t "$name" 2>/dev/null; then
         fi
 
         if [ "${#panel_cmds[@]}" -eq 2 ]; then
-            tmux split-window -h -t "$name:$index" -c "$work_dir"
+            tmux split-window -v -t "$name:$index" -c "$work_dir"
             tmux send-keys -t "$name:$index".1 "${panel_cmds[1]}" C-m
         fi
 
