@@ -1,73 +1,48 @@
-#!/usr/bin/env fish
+#!/usr/bin/env bash
 
-function tmux-enter
-    set session $argv[1]
-    if set -q TMUX
-        tmux switch-client -t $session
-    else
-        tmux attach -t $session
-    end
-end
+session_dir="$HOME/.config/scripts/tmux_sessions"
+session_file="$(ls "$session_dir" | fzf --layout=reverse)"
 
-set sessions backend frontend reporting-app data-services operations
-set session (printf '%s\n' $sessions | fzf --layout=reverse)
+if [ -z "$session_file" ]; then
+    echo "No session selected."
+    exit 1
+fi
 
-set work_dir ~/Repos/
+source "$session_dir/$session_file"
 
-switch $session
-    case operations
-        if not tmux has-session -t operations
-            tmux new-session -d -s operations -c $work_dir/operations-frontend
-            tmux send-keys -t operations:0 'yarn start' C-m
-            tmux new-window -t operations:1 -n 'nvim' -c $work_dir/operations-frontend
-            tmux send-keys -t operations:1 'nvim' C-m
-            tmux new-window -t operations:2 -n 'shell' -c $work_dir/operations-frontend
-        end
-        tmux select-window -t operations:1
-        tmux-enter operations
+: "${name:?Missing name}"
+: "${work_dir:?Missing work_dir}"
 
-    case backend
-        if not tmux has-session -t backend
-            tmux new-session -d -s backend -c $work_dir/backend
-            tmux send-keys -t backend:0 './start.sh' C-m
-            tmux new-window -t backend:1 -n 'nvim' -c $work_dir/backend
-            tmux send-keys -t backend:1 'nvim' C-m
-            tmux new-window -t backend:2 -n 'artisan' -c $work_dir/backend
-            tmux send-keys -t backend:2 'docker compose exec -u sail performativ-api-service bash '
-            tmux new-window -t backend:3 -n 'shell' -c $work_dir/backend
-        end
-        tmux select-window -t backend:1
-        tmux-enter backend
+if ! tmux has-session -t "$name" 2>/dev/null; then
+    tmux new-session -d -s "$name" -c "$work_dir"
 
-    case frontend
-        if not tmux has-session -t frontend
-            tmux new-session -d -s frontend -c $work_dir/frontend
-            tmux send-keys -t frontend:0 'yarn start:local' C-m
-            tmux new-window -t frontend:1 -n 'nvim' -c $work_dir/frontend
-            tmux send-keys -t frontend:1 'nvim' C-m
-            tmux new-window -t frontend:2 -n 'shell' -c $work_dir/frontend
-        end
-        tmux select-window -t frontend:1
-        tmux-enter frontend
+    index=0
+    for window_name in "${window_names[@]}"; do
+        cmd="${window_cmds[$index]}"
+        cmd="${cmd//:::/\\n}"
+        IFS=$'\n' read -rd '' -a panel_cmds <<<"$(echo -e "$cmd")"
 
-    case data-services
-        if not tmux has-session -t data-services
-            tmux new-session -d -s data-services -c $work_dir/data-services
-        end
-        tmux-enter data-services
+        if [ "$index" -eq 0 ]; then
+            tmux rename-window -t "$name:$index" "$window_name"
+            tmux send-keys -t "$name:$index" "${panel_cmds[0]}" C-m
+        else
+            tmux new-window -t "$name:$index" -n "$window_name" -c "$work_dir"
+            tmux send-keys -t "$name:$index" "${panel_cmds[0]}" C-m
+        fi
 
-    case reporting-app
-        if not tmux has-session -t reporting-app
-            tmux new-session -d -s reporting-app -c $work_dir/data-services/reporting-app
-            tmux send-keys -t reporting-app:1 'yarn tauri dev' C-m
-            tmux new-window -t reporting-app:2 -n 'backend' -c $work_dir/data-services/reporting-app/src-tauri/
-            tmux send-keys -t reporting-app:2 'nvim' C-m
-            tmux new-window -t reporting-app:3 -n 'frontend' -c $work_dir/data-services/reporting-app/src/
-            tmux send-keys -t reporting-app:3 'nvim' C-m
-            tmux new-window -t reporting-app:4 -n 'shell' -c $work_dir/data-services/reporting-app/
-        end
-        tmux-enter reporting-app
+        if [ "${#panel_cmds[@]}" -eq 2 ]; then
+            tmux split-window -v -t "$name:$index" -c "$work_dir"
+            tmux send-keys -t "$name:$index".1 "${panel_cmds[1]}" C-m
+        fi
 
-    case '*'
-        echo 'No session selected or invalid selection.'
-end
+        index=$((index + 1))
+    done
+fi
+
+tmux select-window -t "$name:1"
+
+if [ -n "$TMUX" ]; then
+    tmux switch-client -t "$name"
+else
+    tmux attach -t "$name"
+fi

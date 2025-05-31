@@ -15,4 +15,4 @@ max=$(brightnessctl m)
 pct=$((100 * current / max))
 
 message="󰃠 ${pct}%"
-dunstify -r 9999 -u low -t 1000 -h string:x-dunst-stack-tag:osd "$message"
+dunstify -r 9998 -u low -t 1000 -h string:x-dunst-stack-tag:osd "$message"

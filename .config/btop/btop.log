@@ -123,6 +123,7 @@
 2025/05/08 (14:47:11) | ===> btop++ v.1.4.0
 2025/05/08 (14:47:11) | WARNING: Intel GPU: Failed to initialize PMU
 
+<<<<<<< HEAD
 2025/05/11 (18:54:29) | ===> btop++ v.1.4.0
 2025/05/11 (18:54:29) | WARNING: Intel GPU: Failed to initialize PMU
 
@@ -134,3 +135,8 @@
 
 2025/05/11 (18:55:20) | ===> btop++ v.1.4.0
 2025/05/11 (18:55:20) | WARNING: Intel GPU: Failed to initialize PMU
+=======
+2025/05/30 (17:37:21) | ===> btop++ v.1.4.0
+2025/05/30 (17:37:21) | WARNING: Intel GPU: Failed to initialize PMU
+2025/05/30 (17:37:22) | WARNING: Failed to join _runner thread on exit!
+>>>>>>> 8da7707be14aa44acaa395f08d7985bfa620bbde
