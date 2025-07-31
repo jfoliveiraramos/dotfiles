@@ -12,3 +12,5 @@
 # configurations
 !.bashrc
 !.config/
+
+.config/hypr/monitors.conf
