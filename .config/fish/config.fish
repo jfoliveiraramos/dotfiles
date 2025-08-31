@@ -37,10 +37,3 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'micromamba shell init' !!
-set -gx MAMBA_EXE "/home/ramos/.local/bin/micromamba"
-set -gx MAMBA_ROOT_PREFIX "/home/ramos/.micromamba"
-$MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
-# <<< mamba initialize <<<
