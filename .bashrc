@@ -32,4 +32,3 @@ unset __conda_setup
 . "$HOME/.cargo/env"
 
 . "$HOME/.local/bin/env"
-export PATH="/home/ramos/.pixi/bin:$PATH"
