@@ -15,7 +15,7 @@ window#waybar {
 .modules-right {
     min-height: 29px;
     /* Black background */
-    color: #fce9d3;
+    color: #c8c093;
     /* White text */
 }
 
@@ -26,23 +26,23 @@ window#waybar {
 
 .modules-left,
 .modules-right>*>* {
-    background-color: #111115;
-    border: 2px solid #fce9d3;
+    background-color: #1f1f28;
+    border: 2px solid #c8c093;
     /* Orange border */
     border-radius: 8px;
     /* Rounded borders */
 }
 
 .modules-right>*>* {
-    background-color: #111115;
+    background-color: #1f1f28;
     padding: 0px 10px;
 }
 
 #workspaces button {
     padding: 0 6px;
-    background-color: #111115;
+    background-color: #1f1f28;
     /* Black background */
-    color: #fce9d3;
+    color: #c8c093;
     border-radius: 0;
     /* White text */
 }
@@ -58,59 +58,59 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #fce9d3;
+    background: #c8c093;
     /* Black with slight transparency */
-    color: #111115;
+    color: #1f1f28;
     border: none;
     /* White text */
 }
 
 #workspaces button:hover {
-    background: #fce9d3;
+    background: #c8c093;
     /* Black with slight transparency */
-    color: #111115;
+    color: #1f1f28;
     border: none;
     /* White text */
 }
 
 #clock {
     padding: 0 10px;
-    background-color: #111115;
+    background-color: #1f1f28;
     /* Black background */
-    color: #fce9d3;
+    color: #c8c093;
     /* White text */
-    border: 2px solid #fce9d3;
+    border: 2px solid #c8c093;
     /* Orange border */
     border-radius: 8px;
     /* Rounded borders */
 }
 
 #battery {
-    color: #fce9d3;
+    color: #c8c093;
     /* White text */
 }
 
 #battery.charging {
-    color: #fce9d3;
+    color: #c8c093;
     /* White text */
 }
 
 #battery.discharging {
-    color: #ffbf48;
+    color: #e6c384;
     /* Yellow color for discharging */
 }
 
 @keyframes blink {
     to {
         /* Orange background */
-        color: #111115;
+        color: #1f1f28;
         /* Black text */
     }
 }
 
 #battery.warning:not(.charging) {
     /* Orange background */
-    color: #f53c3c;
+    color: #e82424;
     /* Red color for warning */
     animation-name: blink;
     animation-duration: 1s;

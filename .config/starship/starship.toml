@@ -7,13 +7,12 @@ add_newline = true
 palette = 'ramos'
 
 [palettes.ramos]
-black = "#111115"
-orange = "#f8b478"
-accent = "#fce9d3"
-white = "#fefefe"
-red = "#eea08f"
-purple = "#9694ff"
-yellow = "#fccc44"
+white = "#dcd7ba"      # 15
+red = "#e82424"        # 9
+purple = "#938aa9"     # 13
+yellow = "#e6c384"     # 11
+accent = "#c8c093"     # 7
+orange = "#c0a36e"     # 3
 
 [character]
 success_symbol = '[❯](bold orange)'
