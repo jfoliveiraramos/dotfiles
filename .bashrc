@@ -14,6 +14,8 @@ eval "$(zoxide init --cmd cd bash)"
 
 export GDK_BACKEND=wayland
 
+export EDITOR=nvim
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/joaoramos/.miniconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
