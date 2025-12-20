@@ -28,7 +28,7 @@ cursor-color = c8c093
 selection-background = 2d4f67
 selection-foreground = c8c093
 
-window-padding-x=8
+window-padding-x=7
 window-padding-y=0
 
 command=fish

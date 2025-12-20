@@ -4,6 +4,8 @@ end
 
 set -g fish_greeting
 
+set -x EDITOR nvim
+
 set -x GOPATH $HOME/.go
 set -x PATH $PATH $GOPATH/bin
 
