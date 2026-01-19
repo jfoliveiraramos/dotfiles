@@ -37,3 +37,5 @@
 !ghostty/**
 !tmux
 !tmux/**
+!river
+!river/**
