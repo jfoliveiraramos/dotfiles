@@ -39,3 +39,5 @@
 !tmux/**
 !river
 !river/**
+!satty
+!satty/**

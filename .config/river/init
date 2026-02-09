@@ -100,8 +100,9 @@ done
 
 # Set background and border color
 riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+riverctl border-color-focused 0xc8c093
+riverctl border-color-unfocused 0xFF000000
+riverctl border-width 2
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -115,25 +116,25 @@ riverctl rule-add -app-id "bar" csd
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 2 -outer-padding 2 &
 
 riverctl keyboard-layout pt
 
 riverctl input pointer-1739-52772-SYNA32B0:00_06CB:CE24_Touchpad natural-scroll enabled
 
-riverctl border-color-focused 0xFF0000FF
-riverctl border-width 2
-riverctl border-color-focused 0xFFFFFFFF
-riverctl border-color-unfocused 0xFF000000
-
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super+Shift F toggle-float
 
 riverctl map normal Super R spawn "${scripts}/wofi.sh"
+riverctl map normal Super W spawn "${scripts}/popup_waybar.sh"
+riverctl map normal Super+Shift W spawn "${scripts}/persistent_waybar.sh"
 
 riverctl rule-add ssd
 
 riverctl spawn dunst
+riverctl spawn waybar &&
+    riverctl spawn blueman-applet
+riverctl spawn nm-applet
 riverctl spawn swayosd-server
 riverctl spawn 'swww-daemon'
 riverctl spawn 'swww img /usr/share/backgrounds/hyprpaper.jpg'

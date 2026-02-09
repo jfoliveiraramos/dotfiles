@@ -9,9 +9,10 @@
     "margin-left": 3,
     "margin-right": 3,
     "margin-bottom": 4,
-    "spacing": 10, // Gaps between modules (4px)
+    // "spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "river/tags",
         "hyprland/workspaces",
         "sway/mode",
         "sway/scratchpad",
@@ -54,6 +55,10 @@
     //         "default": ""
     //     }
     // },
+    "river/tags": {
+        "hide-vacant" : true,
+        "num-tags": 5,
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

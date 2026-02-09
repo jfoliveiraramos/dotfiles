@@ -8,8 +8,8 @@ set -x QT_QPA_PLATFORM xcb
 bind \cq $HOME/.config/scripts/setup_tmux.sh
 bind \ca tmux attach
 bind \cs "echo \"opening Spotify Player...\" && spotify_player"
-bind \e\ce "echo \"opening Thunar at \$PWD...\" && thunar &>/dev/null . & disown && clear"
-bind \e\cc "echo \"opening VS Codium at \$PWD...\" && codium >/dev/null . && clear"
+bind \e\ce "echo \"opening Thunar at \$PWD...\" && thunar &>/dev/null . & disown"
+bind \e\cc "echo \"opening VS Codium at \$PWD...\" && codium . &>/dev/null "
 
 set -x STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 starship init fish | source
