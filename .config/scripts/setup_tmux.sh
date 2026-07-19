@@ -37,9 +37,9 @@ if ! tmux has-session -t "$name" 2>/dev/null; then
 
         index=$((index + 1))
     done
-fi
 
-tmux select-window -t "$name:1"
+    tmux select-window -t "$name:$default_index"
+fi
 
 if [ -n "$TMUX" ]; then
     tmux switch-client -t "$name"

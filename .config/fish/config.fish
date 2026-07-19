@@ -6,6 +6,7 @@ set -x PATH $PATH $HOME/.cache/rebar3/bin
 set -x QT_QPA_PLATFORM xcb
 
 bind \cq $HOME/.config/scripts/setup_tmux.sh
+bind \cg $HOME/.config/scripts/git_branches.sh
 bind \ca tmux attach
 bind \cn nvim
 bind \cs "echo \"opening Spotify Player...\" && spotify_player"

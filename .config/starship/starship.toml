@@ -7,12 +7,12 @@ add_newline = true
 palette = 'ramos'
 
 [palettes.ramos]
-white = "#dcd7ba"      # 15
-red = "#e82424"        # 9
-purple = "#938aa9"     # 13
-yellow = "#e6c384"     # 11
-accent = "#c8c093"     # 7
-orange = "#c0a36e"     # 3
+white = "#dcd7ba"  # 15
+red = "#ffaf5f"    # 9
+purple = "#ffaf5f" # 13
+yellow = "#ffaf5f" # 11
+accent = "#ffaf5f" # 7
+orange = "#ffaf5f" # 3
 
 [character]
 success_symbol = '[❯](bold orange)'
@@ -26,7 +26,7 @@ style = 'bold orange'
 [git_status]
 style = 'bold accent'
 
-[conda] 
+[conda]
 style = 'bold orange'
 ignore_base = true
 

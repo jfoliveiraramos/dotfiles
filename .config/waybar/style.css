@@ -1,6 +1,6 @@
 * {
     font-family: JetBrainsMono NFM, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     /*min-height: 0;*/
     /* Black background */
     /* White text */
@@ -15,7 +15,7 @@ window#waybar {
 .modules-right {
     min-height: 29px;
     /* Black background */
-    color: #c8c093;
+    color: #ffaf5f;
     /* White text */
 }
 
@@ -26,15 +26,15 @@ window#waybar {
 
 .modules-left,
 .modules-right>*>* {
-    background-color: #1f1f28;
-    border: 2px solid #c8c093;
+    background-color: #000000;
+    /* border: 2px solid #c8c093; */
     /* Orange border */
     border-radius: 8px;
     /* Rounded borders */
 }
 .modules-right>*>* {
-    background-color: #1f1f28;
-    padding: 0px 10px;
+    background-color: #000000;
+    padding: 0px 12px;
     margin: 0px 8px;
 }
 .modules-right>*>*:last-child {
@@ -42,10 +42,10 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 6px;
-    background-color: #1f1f28;
+    padding: 0 9px;
+    background-color: #000000;
     /* Black background */
-    color: #c8c093;
+    color: #ffaf5f;
     border-radius: 0;
     /* White text */
 }
@@ -62,58 +62,57 @@ window#waybar {
 
 
 #tags button.focused {
-    background: #c8c093;
-    color: #1f1f28;
+    background: #000000;
+    color: #ffaf5f;
     border: none;
 }
 
 #workspaces button.active {
-    background: #c8c093;
-    /* Black with slight transparency */
-    color: #1f1f28;
-    border: none;
+    border-bottom: 2px solid #ffaf5f; 
+;
     /* White text */
+    font-weight: Bold; 
 }
 
 #workspaces button:hover {
     background: #c8c093;
     /* Black with slight transparency */
-    color: #1f1f28;
+    color: #ffaf5f;
     border: none;
     /* White text */
 }
 
 #clock {
-    padding: 0 10px;
-    background-color: #1f1f28;
+    padding: 8px 18px;
+    background-color: #000000;
     /* Black background */
-    color: #c8c093;
+    color: #ffaf5f;
     /* White text */
-    border: 2px solid #c8c093;
+    /* border: 2px solid #c8c093; */
     /* Orange border */
     border-radius: 8px;
     /* Rounded borders */
 }
 
 #battery {
-    color: #c8c093;
+    color: #ffaf5f;
     /* White text */
 }
 
 #battery.charging {
-    color: #c8c093;
+    color: #ffaf5f;
     /* White text */
 }
 
 #battery.discharging {
-    color: #e6c384;
+    color: #ffaf5f;
     /* Yellow color for discharging */
 }
 
 @keyframes blink {
     to {
         /* Orange background */
-        color: #1f1f28;
+        color: #ffaf5f;
         /* Black text */
     }
 }
@@ -136,3 +135,8 @@ window#waybar {
 /*    border-top-right-radius: 0px;*/
 /*    border-bottom-right-radius: 0px;*/
 /*}*/
+
+#custom-reunion.together    { color: #d28fff; }
+#custom-reunion.today    { color: #f5c2e7; }
+#custom-reunion.soon { color: #f9e2af; }
+#custom-reunion.far     { color: #a6e3a1; }

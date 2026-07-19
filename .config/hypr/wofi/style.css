@@ -1,6 +1,6 @@
-@define-color black #1f1f28;
-@define-color orange #f8b478;
-@define-color accent #c8c093;
+@define-color black #000000;
+@define-color orange #ffaf5f;
+@define-color accent #ffaf5f;
 @define-color base black;
 @define-color text @accent;
 
@@ -13,7 +13,7 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @accent;
+  border: 1px solid @accent;
   border-radius: 10px;
   background-color: @base;
   animation: slideIn 0.5s ease-in-out both;

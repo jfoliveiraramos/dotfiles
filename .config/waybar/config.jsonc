@@ -20,9 +20,10 @@
     ],
     "modules-center": [
         "sway/window",
-        "clock"
+        "clock",
     ],
     "modules-right": [
+        "custom/reunion",
         // "mpd",
         // "idle_inhibitor",
         "pulseaudio",
@@ -119,7 +120,7 @@
         "spacing": 10
     },
     "clock": {
-        "timezone": "Europe/Copenhagen",
+        "timezone": "Europe/London",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -235,5 +236,12 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+    "custom/reunion": {
+        "exec": "days_until",
+        "return-type": "json",
+        "interval": 3600,
+        "on-click": "foot -e nvim ~/.config/days_until/date",
+        "on-click-right": "days_until --google-calendar",
+    },
 }
