@@ -21,7 +21,7 @@
 
     width = 400
     height = 90
-    offset = 10x10
+    offset = 2x2
     corner_radius=5
     padding=11
     horizontal_padding=11
