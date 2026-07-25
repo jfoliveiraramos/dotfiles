@@ -135,6 +135,5 @@ riverctl spawn dunst
 riverctl spawn waybar &&
     riverctl spawn blueman-applet
 riverctl spawn nm-applet
-riverctl spawn swayosd-server
 riverctl spawn 'swww-daemon'
 riverctl spawn 'swww img /usr/share/backgrounds/hyprpaper.jpg'

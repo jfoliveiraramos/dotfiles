@@ -11,19 +11,15 @@ window#waybar {
 }
 
 
+.modules-center,
 .modules-left,
 .modules-right {
     min-height: 29px;
-    /* Black background */
     color: #ffaf5f;
-    /* White text */
 }
 
 
-.modules-right {
-    background-color: transparent;
-}
-
+.modules-center,
 .modules-left,
 .modules-right>*>* {
     background-color: #000000;
@@ -32,6 +28,11 @@ window#waybar {
     border-radius: 8px;
     /* Rounded borders */
 }
+
+.modules-center {
+    padding: 0px 20px;
+}
+
 .modules-right>*>* {
     background-color: #000000;
     padding: 0px 12px;
@@ -136,6 +137,10 @@ window#waybar {
 /*    border-bottom-right-radius: 0px;*/
 /*}*/
 
+
+#custom-quote {
+    font-style: italic; 
+}
 #custom-reunion.together    { color: #d28fff; }
 #custom-reunion.today    { color: #f5c2e7; }
 #custom-reunion.soon { color: #f9e2af; }
