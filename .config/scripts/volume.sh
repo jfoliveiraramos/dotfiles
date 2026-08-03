@@ -6,10 +6,10 @@ vol_pct=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -n1 | tr
 mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
 
 if [ "$1" = "--up" ]; then
-    if [ $(($vol_pct + $step)) -lt 100 ]; then
+    if [ $(($vol_pct + $step)) -lt 150 ]; then
         pactl set-sink-volume @DEFAULT_SINK@ +"$step"%
     else
-        pactl set-sink-volume @DEFAULT_SINK@ "100"%
+        pactl set-sink-volume @DEFAULT_SINK@ "150"%
     fi
 elif [ "$1" = "--down" ]; then
     pactl set-sink-volume @DEFAULT_SINK@ -"$step"%

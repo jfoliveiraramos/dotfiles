@@ -1,5 +1,5 @@
 #!/bin/bash
-step=5
+step=1
 
 if [ "$1" = "--up" ]; then
     brightnessctl set +"$step"%
