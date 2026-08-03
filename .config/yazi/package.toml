@@ -1,0 +1,24 @@
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "e60e122"
+hash = "fbaf0adc8efc59555b748d36aab62d40"
+
+[[plugin.deps]]
+use = "XYenon/clipboard"
+rev = "d4d19ea"
+hash = "2cfc56d62f9ca0c62ce356e4364c3d89"
+
+[[flavor.deps]]
+use = "marcosvnmelo/kanagawa-dragon"
+rev = "b433f4a"
+hash = "b967c24a30350b1c5cd3a2ad5a7732e7"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "4770a34"
+hash = "7dfe41c9c3d9be76da8a844263d0bbed"
+
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"
