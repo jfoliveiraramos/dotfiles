@@ -2,5 +2,5 @@ name=example
 work_dir=$HOME
 window_names=(name1 name2)
 window_cmds=("echo Hello" fastfetch)
-defautl_index=0
+defautl_index=1
 
