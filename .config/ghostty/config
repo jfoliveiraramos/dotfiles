@@ -1,6 +1,5 @@
 window-decoration=false
 
-
 font-family=JetBrainsMono NFM
 
 font-size=14
@@ -31,3 +30,6 @@ selection-foreground = c8c093
 window-padding-x=7
 window-padding-y=0
 
+macos-option-as-alt=left
+
+font-size=22

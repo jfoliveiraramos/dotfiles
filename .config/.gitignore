@@ -59,3 +59,7 @@
 !gtk-4.0/**
 !systemd
 !systemd/**
+!ripgrep 
+!ripgrep/**
+!fd 
+!fd/**
